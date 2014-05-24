@@ -10,17 +10,17 @@
 
 ## The Script does the following
 
-1.Merges the training and the test sets to create one data set.Files combined were the following **X\_test.txt and X\_train.txt, y\_test.txt & y\_train.txt, subject\_test.txt & subject\_train.txt**.
+1.Merges the training and the test sets to create one data set.Files combined were the following **X\_test.txt and X\_train.txt, y\_test.txt & y\_train.txt, subject\_test.txt & subject\_train.txt**. The table obtained at this step is **alldata** 
 
-2.Data for the coulmn names was obtained from the file **features.txt**.Renamed the column names with Readable and Descriptive names .Variable names changed to lowercase,removed parantheses,hyphen,commas.
+2.Data for the coulmn names was obtained from the file **features.txt**.Renamed the column names of **allData** with Readable and Descriptive names .Variable names changed to lowercase,removed parantheses,hyphen,commas.
 
-3.Replaced the numeric value to the name of the corresponding Activity column from the file **activity_labels.txt**.
+3.Replaced the numeric value to the name of the corresponding Activity in the activity column of **allData** with labels obtained from the file **activity_labels.txt**.
 
-4.Created a dataset subset using variables that represent only a measure of mean or standard deviation only.
+4.Created a dataset subset using variables that represent only a measure of mean or standard deviation only.The table obtained in this is **meanStddata**.
 
-5.Created the independent tidy data set with the average of each variable for each activity and each subject.
+5.Created the required independent tidy data set with the average of each variable for each activity and each subject.The output table is **allMeans**.
 
 ## Output of the Script
 
-It gives a tidy dataset of all averages of the selected columns for mean and Standard deviation which can be used for further Data Analysis.The tidy dataset obatained was 180 observations with 88 variables based on each subject and activity .
+It gives a tidy dataset of all averages of the selected columns for Mean and Standard deviation which can be used for further Data Analysis.The tidy dataset obtained has 180 observations with 88 variables based on each subject and activity .The output obtained is in the table **allMeans**.
 

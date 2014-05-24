@@ -28,6 +28,9 @@ pattern <- "\\(|\\)|-"
 features[,2] <- gsub(pattern,"",features[,2])
 features[,2] <- gsub(",","to",features[,2])
 features[,2] <- tolower(features[,2])
+features[,2] <- gsub("^f","frequency",features[,2])
+features[,2] <- gsub("^t","time",features[,2])
+features[,2] <- gsub("std","standarddeviation",features[,2])
 names(allData) <- c("subject","activity",features[,2])
 
 #3.Uses descriptive activity names to name the activities in the data set(allData)
@@ -54,7 +57,7 @@ allData$activity <- gsr(allData$activity,c("1", "2", "3","4","5","6"),
 #Creating a dataset named meanstdData using variables that represent only 
 # a measure of mean or standard deviation only"
 
-meanStdData<- subset(allData,select =c(subject,activity,grep("mean|std",names(allData))))
+meanStdData<- subset(allData,select =c(subject,activity,grep("mean|standarddeviation",names(allData))))
 
 #5.Creating 2nd,independent tidy data set with the 
 # average of each variable for each activity and each subject. 
@@ -78,6 +81,7 @@ for (i in 1:length(subjectId)){
         }
 }
 names(allMeans) <- colnames(meanStdData)
+print("The output Tidy Data Set in allMeans table.")
 
 
 
